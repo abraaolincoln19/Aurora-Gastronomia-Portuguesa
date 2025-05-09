@@ -244,3 +244,48 @@ footer h3 {
 .popup-content span:hover {
   color: darkred;
 }
+
+@media (max-width: 600px) {
+  section {
+    padding: 30px 2%;
+  }
+
+  section img {
+    width: 100%;
+  }
+}
+
+/* ============================
+   Rodapé e WhatsApp Responsivos
+============================ */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 40px 5%;
+  background-color: var(--cor-bg);
+  border-top: 2px solid var(--cor-cinza-h2);
+  color: var(--cor-texto);
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}
