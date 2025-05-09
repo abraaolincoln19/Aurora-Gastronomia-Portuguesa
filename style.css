@@ -1,0 +1,246 @@
+/* Cores */
+:root {
+  --cor-bg: #1c1b1b;
+  --cor-texto: #C9C9C9;
+  --cor-terciaria: #C5B07E;
+  --cor-cinza-p: #ADADAD;
+  --cor-cinza-h2: #7E7E7E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: var(--cor-bg);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  color: var(--cor-texto);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  color: var(--cor-texto);
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
+nav li:hover {
+  color: var(--cor-terciaria);
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.languages a {
+  margin: 0 5px;
+}
+
+.languages img {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.languages img:hover {
+  border: 1px solid var(--cor-terciaria);
+}
+
+main {
+  width: 100%;
+  flex: 1;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  width: 100%;
+}
+
+.banner img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+.banner .banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--cor-terciaria);
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 0 10px rgba(0, 0, 0, 1);
+}
+
+/* Seções */
+section {
+  display: flex;
+  gap: 20px;
+  padding: 50px 5%;
+  align-items: center;
+  border-top: 2px solid var(--cor-cinza-h2);
+}
+
+/* Aqui faço o lado inverso dos textos e imagens */
+section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+section img {
+  width: 40%;
+  height: auto;
+  border-radius: 10px;
+}
+
+article {
+  width: 60%;
+  color: var(--cor-texto);
+}
+
+article h2 {
+  font-size: 38px;
+  color: var(--cor-terciaria);
+  margin-bottom: 15px;
+}
+
+article p {
+  line-height: 1.6;
+  color: var(--cor-cinza-h2);
+}
+
+/* Rodapé */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 5%;
+  background-color: var(--cor-bg);
+  border-top: 2px solid var(--cor-cinza-h2);
+  color: var(--cor-texto);
+}
+
+footer h3 {
+  color: var(--cor-terciaria);
+}
+
+#cta-footer a {
+  font-size: 18px;
+  color: var(--cor-terciaria);
+  text-decoration: none;
+}
+
+#cta-footer a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  background-color: var(--cor-cinza-p);
+  color: var(--cor-bg);
+  padding: 10px 0;
+}
+
+.autor:hover {
+  text-decoration: underline;
+}
+
+/* ============================
+     Estilização do WhatsApp Popup 
+   ============================ */
+
+   /* Botão flutuante do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+#whatsapp-popup {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  z-index: 1000;
+}
+
+.popup-content {
+  padding: 15px;
+  position: relative;
+}
+
+.popup-content h3 {
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  margin-bottom: 15px;
+}
+
+.popup-content button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.popup-content span {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: red;
+}
+
+.popup-content span:hover {
+  color: darkred;
+}
